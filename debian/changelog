@@ -1,3 +1,12 @@
+openldap (2.4.42+dfsg-2ubuntu3.2) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: denial of service via search with page size of 0
+    - debian/patches/CVE-2017-9287.patch: fix double-free in
+      servers/slapd/back-mdb/search.c.
+    - CVE-2017-9287
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 30 May 2017 15:20:53 -0400
+
 openldap (2.4.42+dfsg-2ubuntu3.1) xenial; urgency=medium
 
   * Fix use after free with GnuTLS. (LP: #1557248)
