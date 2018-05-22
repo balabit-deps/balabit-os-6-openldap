@@ -1,0 +1,31 @@
+Description: check result of ldap_int_initialize in ldap_{get,set}_option
+Author: Ryan Tandy <ryan@nardis.ca>
+Origin: Upstream, http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=commit;h=e437b12277c1cc8ec72e0f78f660137c60ffaad7
+Bug: http://www.openldap.org/its/index.cgi/Software%20Bugs?id=8648;selectid=8648
+Bug-Ubuntu: http://www.openldap.org/its/index.cgi/Software%20Bugs?id=8648;selectid=8648
+Last-Update: 2018-05-22
+
+---
+ libraries/libldap/options.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+--- a/libraries/libldap/options.c
++++ b/libraries/libldap/options.c
+@@ -106,6 +106,8 @@
+ 
+ 	if( lo->ldo_valid != LDAP_INITIALIZED ) {
+ 		ldap_int_initialize(lo, NULL);
++		if ( lo->ldo_valid != LDAP_INITIALIZED )
++			return LDAP_LOCAL_ERROR;
+ 	}
+ 
+ 	if(ld != NULL) {
+@@ -446,6 +448,8 @@
+ 
+ 	if( lo->ldo_valid != LDAP_INITIALIZED ) {
+ 		ldap_int_initialize(lo, dbglvl);
++		if ( lo->ldo_valid != LDAP_INITIALIZED )
++			return LDAP_LOCAL_ERROR;
+ 	}
+ 
+ 	if(ld != NULL) {

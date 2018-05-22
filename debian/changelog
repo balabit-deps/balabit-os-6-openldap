@@ -1,3 +1,13 @@
+openldap (2.4.42+dfsg-2ubuntu3.3) xenial; urgency=medium
+
+  [ Ryan Tandy ]
+  * d/p/ITS-8648-check-result-of-ldap_int_initialize-in-ldap.patch,
+    d/p/ITS-8648-init-SASL-library-in-global-init.patch: Import upstream
+    patches to fix memory corruption caused by calling sasl_client_init()
+    multiple times and possibly concurrently.  (ITS#8648) (LP: #1688575)
+
+ -- Andreas Hasenack <andreas@canonical.com>  Tue, 22 May 2018 10:54:12 -0300
+
 openldap (2.4.42+dfsg-2ubuntu3.2) xenial-security; urgency=medium
 
   * SECURITY UPDATE: denial of service via search with page size of 0

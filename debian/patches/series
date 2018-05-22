@@ -29,3 +29,5 @@ ITS8240-remove-obsolete-assert.patch
 fix-ldap-distribution.patch
 ITS8385-fix-use-after-free-with-GnuTLS
 CVE-2017-9287.patch
+ITS-8648-check-result-of-ldap_int_initialize-in-ldap.patch
+ITS-8648-init-SASL-library-in-global-init.patch
