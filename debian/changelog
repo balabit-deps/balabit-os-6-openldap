@@ -1,3 +1,11 @@
+openldap (2.4.42+dfsg-2ubuntu3.4) xenial; urgency=medium
+
+  * d/apparmor-profile: update apparmor profile to allow reading of
+    files needed when slapd is behaving as a kerberos/gssapi client
+    and acquiring its own ticket. (LP: #1783183)
+
+ -- Andreas Hasenack <andreas@canonical.com>  Tue, 23 Oct 2018 09:47:19 -0300
+
 openldap (2.4.42+dfsg-2ubuntu3.3) xenial; urgency=medium
 
   [ Ryan Tandy ]
