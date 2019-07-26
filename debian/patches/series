@@ -31,3 +31,8 @@ ITS8385-fix-use-after-free-with-GnuTLS
 CVE-2017-9287.patch
 ITS-8648-check-result-of-ldap_int_initialize-in-ldap.patch
 ITS-8648-init-SASL-library-in-global-init.patch
+CVE-2019-13057-1.patch
+CVE-2019-13057-2.patch
+CVE-2019-13057-3.patch
+CVE-2019-13057-4.patch
+CVE-2019-13565.patch
