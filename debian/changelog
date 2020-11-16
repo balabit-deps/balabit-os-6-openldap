@@ -1,3 +1,18 @@
+openldap (2.4.42+dfsg-2ubuntu3.11) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: assertion failure in Certificate List syntax
+    validation
+    - debian/patches/CVE-2020-25709.patch: properly handle error in
+      servers/slapd/schema_init.c.
+    - CVE-2020-25709
+  * SECURITY UPDATE: assertion failure in CSN normalization with invalid
+    input
+    - debian/patches/CVE-2020-25710.patch: properly handle error in
+      servers/slapd/schema_init.c.
+    - CVE-2020-25710
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 16 Nov 2020 08:41:27 -0500
+
 openldap (2.4.42+dfsg-2ubuntu3.10) xenial-security; urgency=medium
 
   * SECURITY UPDATE: DoS via NULL pointer dereference
